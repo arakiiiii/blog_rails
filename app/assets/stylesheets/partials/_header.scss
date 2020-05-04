@@ -1,0 +1,31 @@
+/*----------------------------
+  ■ header
+-----------------------------*/
+#header{
+  .head_title{
+    text-align: center;
+    padding: 30px 0;
+
+    h1{
+      font-size: 40px;
+      span{
+        color: $red;
+      }
+    }
+    p{
+      font-size: 15px;
+    }
+  }
+  ul.head_nav{
+    background-color: #006377;
+    color: white;
+    display: flex;
+    list-style: none;
+    padding: 20px 30px;
+    margin: 0;
+    li{
+      font-weight: bold;
+      margin-right: 30px;
+    }
+  }
+}
