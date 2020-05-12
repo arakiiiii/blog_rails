@@ -43,6 +43,10 @@ gem 'font-awesome-sass', '~> 5.4.1'
 gem "slim-rails"
 gem "html2slim"
 
+#vue
+gem "webpacker", github: "rails/webpacker"
+
+
 #auth
 gem 'devise'
 
