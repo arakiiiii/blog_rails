@@ -1,9 +1,10 @@
 // base
-@import "./override/_base", "./override/_reset";
+@import "./override/_base";
 @import "bootstrap";
+@import "./override/_reset";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "./mixin/_mixin";
-@import "./config/_color", "./config/_font", "./config/_animation";
+@import "./config/_style", "./config/_font", "./config/_animation";
 @import "./modules/*";
 @import "./partials/*";

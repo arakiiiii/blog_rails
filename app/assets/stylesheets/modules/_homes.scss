@@ -1,3 +1,25 @@
-// Place all the styles related to the homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#layout_home{
+padding: 50px 30px;
+@include mq-down(sp){
+  padding: 0;
+}
+
+/*---------------
+ ■ box
+------------------*/
+.box{
+  @include mq-up(sp){
+    box-shadow: 0px 0px 5px $lightgray;
+  }
+
+  .box_top{
+    font-size: 12px;
+    .tags{
+      a:not(:last-child)::after{
+        content: ">";
+        margin: 0 3px;
+      }
+    }
+  }
+}
+}

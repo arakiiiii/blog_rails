@@ -1,0 +1,47 @@
+$colors: (
+  white:       #fff,
+  gray:        #808080,
+  gray-2:      #d3d3d3,
+  gray-3:      #f1f1f1,
+  black:       #000,
+  red:         #f00,
+  blue:        #006377
+);
+
+$widths: (
+  pc:     1200px,
+  sp:     600px,
+);
+
+
+@each $colorName, $color in $colors {
+  //.text-変数名 のclassを生成
+  .text-#{$colorName} {
+    color: $color;
+  }
+  //.bg-変数名 のclassを生成
+  .bg-#{$colorName} {
+    background: $color;
+  }
+}
+
+@each $name, $width in $widths {
+  //.mxw-変数名 のclass生成
+  .mxw-#{$name} {
+    max-width: $width;
+  }
+  //.w-変数名 のclass生成
+  .w-#{$name}{
+    width: $width;
+  }
+}
+@mixin mq-up($width: pc) {
+  @media screen and (min-width: #{map-get($widths, $width)}){
+    @content;
+  }
+}
+@mixin mq-down($width: pc) {
+  @media screen and (max-width: #{map-get($widths, $width)}){
+    @content;
+  }
+}

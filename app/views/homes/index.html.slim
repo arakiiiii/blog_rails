@@ -1,1 +1,11 @@
-= render "/partials/header"
+#layout_home.bg-gray-3
+  .box.bg-white
+    .box_top.p-3
+      .tags.d-flex.justify-content-start
+        a href="" ホーム
+        a href="" プログラミング
+        a href="" Ruby on Rails
+      .text-gray 更新日: 2020年 10月 20日
+
+- content_for :nav do
+  = render "/partials/header"
