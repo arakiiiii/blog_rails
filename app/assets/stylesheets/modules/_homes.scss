@@ -1,25 +1,121 @@
+.wrapper{
+  overflow: hidden;
+}
+
 #layout_home{
 padding: 50px 30px;
-@include mq-down(sp){
+@include sp{
   padding: 0;
+}
+@include tablet{
+  display: flex;
+  justify-content: center;
 }
 
 /*---------------
  ■ box
 ------------------*/
 .box{
-  @include mq-up(sp){
-    box-shadow: 0px 0px 5px $lightgray;
+  box-shadow: 0px 0px 5px $lightgray;
+  @include sp{
+    box-shadow: none;
   }
 
-  .box_top{
+  @include tablet{
+    max-width:900px;
+  }
+
+  header{
     font-size: 12px;
-    .tags{
+    font-weight: bold;
+    h1{
+      font-weight: bold;
+    }
+    nav{
       a:not(:last-child)::after{
         content: ">";
         margin: 0 3px;
       }
     }
   }
+
+  .contents{
+    //本文
+    p{
+
+    }
+    //タイトル
+    h2{
+      font-weight: bold;
+      background-color: #f1f1f1;
+      padding: 18px;
+      border-left: 7px solid #8c8880;
+      margin: 40px 0 30px 0;
+    }
+
+    .code{
+      background-color: $code-bg;
+      color: white;
+      padding: 20px;
+      font-size: 15px;
+    }
+  }
 }
+
+.side_area{
+  display: none;
+  margin-left: 30px;
+  width: 350px;
+  @include tablet{
+    display: block;
+  }
+
+  .widget{
+    background-color: $white;
+    box-shadow: 0px 0px 5px $lightgray;
+    margin-bottom: 30px;
+    header{
+      padding: 5px 20px;
+      font-weight: bold;
+      background-color: $brown;
+      color: white;
+    }
+    .category_item{
+      padding: 10px 20px;
+      a{
+        font-weight: bold;
+      }
+      li{
+        padding-left: 10px;
+      }
+    }
+    .headline_item{
+      li{
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .category{
+    header{
+      &:before{
+        @include awesome("\f277");
+        margin-right: 10px;
+      }
+    }
+  }
+  .headline{
+    header{
+      &:before{
+        @include awesome("\f5fd");
+        margin-right: 10px;
+      }
+    }
+  }
+
+}
+
 }

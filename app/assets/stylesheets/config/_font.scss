@@ -1,0 +1,20 @@
+h1{
+  font-size: 28px;
+  @include sp{
+    font-size: 20px;
+  }
+}
+
+h2{
+  font-size: 22px;
+  @include sp{
+    font-size: 17px;
+  }
+}
+
+p{
+  font-size: 16px;
+  @include sp{
+    font-size: 14px;
+  }
+}

@@ -5,6 +5,6 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "./mixin/_mixin";
-@import "./config/_style", "./config/_font", "./config/_animation";
-@import "./modules/*";
+@import "./config/_style", "./config/_animation","./config/_font";
 @import "./partials/*";
+@import "./modules/*";

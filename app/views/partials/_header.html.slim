@@ -16,4 +16,19 @@ header#header
       a.m-3 href=""
         i.fa.fa-coffee.mr-1
         | 雑記
-      i.fas.fa-bars
+      i.fas.fa-bars @click="toggleMenu"
+  .head_menu :class="{on: !show_menu}"
+    button.menu_close @click="toggleMenu" 閉じる
+    a.px-4.py-3 href=""
+      i.fas.fa-laptop.mr-2
+      | プログラミング
+    a.px-4.py-3 href=""
+      i.fas.fa-paint-brush.mr-2
+      | デザイン
+    a.px-4.py-3 href=""
+      i.fa.fa-database.mr-2
+      | サーバー
+    a.px-4.py-3 href=""
+      i.fa.fa-coffee.mr-2
+      | 雑記
+  .smoke :class="{on: !show_menu}" @click="toggleMenu"

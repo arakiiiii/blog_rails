@@ -1,11 +1,61 @@
-#layout_home.bg-gray-3
-  .box.bg-white
-    .box_top.p-3
-      .tags.d-flex.justify-content-start
+#layout_home.bg-gray-3.
+  .box.bg-white.p-3
+    header
+      nav.d-flex.justify-content-start
         a href="" ホーム
         a href="" プログラミング
         a href="" Ruby on Rails
-      .text-gray 更新日: 2020年 10月 20日
+      h1.py-3 iPadがサブディスプレイに！アプリ「Duet Display」の使い方
+      .text-gray.text-right 更新日: 2020年 10月 20日
+      = image_tag "/img/test1.png", class:"w-100 my-2"
+    .contents
+      p iPadを持っているのであれば、是非おすすめしたいのが「iPadをPCのサブディレクトリとして使う」ことです。
 
+      section#section1
+        h2 サブディスプレイ用iPadアプリはどれが良い？
+        p サブディスプレイ用のiPadアプリを色々と試してきましたが、「Duet Display」が使いやすく、反応速度が早く、ダントツでおすすめできます。有料アプリで価格は1,000円以上ですが、それだけの価値はあります。
+        .code id="ruby"
+          | def transfer_money(opponent,win_or_lose)
+          |
+          |  strength_relationship = [
+          |    '通常の目(1)','通常の目(2)','通常の目(3)',
+          |    'ヒフミ','目なし',
+          |    '通常の目(4)','通常の目(5)','通常の目(6)',
+          |    'シゴロ','ゾロ目','ピンゾロ'
+          |  ]
+          |  dividend_table = [
+          |    -2,-1,
+          |    1,1,1,
+          |    1,1,1,
+          |    2,3,5
+          |  ]
+          | end
+
+  .side_area
+    .widget.category
+      header カテゴリー
+      ul
+        li.category_item
+          a href="" プログラミング
+          ul
+            li HTML&CSS
+            li Ruby
+            li Javascript
+        li.category_item
+          a href="" デザイン
+          ul
+            li Illustrator
+            li PhotoShop
+        li.category_item
+          a href="" サーバー
+          ul
+            li AWS使い方
+            li AWS機能まとめ
+    .widget.headline
+      header 目次
+      ul.headline_item
+        li サブディスプレイ用iPadアプリはどれが良い？
+        li デュアルディスプレイのメリット
+        li Duet Displayの使い方
 - content_for :nav do
   = render "/partials/header"

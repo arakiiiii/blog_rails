@@ -17,10 +17,10 @@
     }
   }
   .head_nav{
-    background-color: $blue;
+    background-color: $brown;
     .items{
       a{
-        @include mq-down(sp){
+        @include sp{
           display: none;
         }
         color: $white;
@@ -31,7 +31,7 @@
           display: block;
           position: absolute;
           border-radius: 0px;
-          background-color: red;
+          background-color: $blue;
           width: 0;
           height: 3px;
           transition: .3s ease-in-out;
@@ -43,13 +43,72 @@
         }
       }
       .fa-bars{
-        @include mq-up(sp){
-          display: none;
+        display: none;
+        @include sp{
+          display: block;
         }
         color: white;
         font-size: 30px;
         margin: 13px 0;
         cursor: pointer;
+      }
+    }
+  }
+
+  .smoke{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #000;
+    opacity: 0.5;
+    display: none;
+    &.on{
+      display: block;
+    }
+  }
+
+  .head_menu{
+    &.on{
+      animation: fade-in .2s forwards 0s;
+    }
+    &.off{
+      animation: fade-Out .2s forwards 0s;
+    }
+    display: none;
+    opacity: 0;
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: $white;
+    @include sp{
+      display: none;
+    }
+    .menu_close{
+      outline: none;
+      display: block;
+      margin: 20px auto;
+      font-size: 20px;
+      &:before{
+        @include awesome("\f00d");
+      }
+    }
+    a{
+      display: block;
+      color: black;
+      i{
+        text-align: center;
+        width: 20px;
+      }
+      &:after{
+        @include awesome("\f054");
+        float: right;
       }
     }
   }

@@ -1,6 +1,7 @@
 $colors: (
   white:       #fff,
   gray:        #808080,
+  gray-1:      #9e9e9e,
   gray-2:      #d3d3d3,
   gray-3:      #f1f1f1,
   black:       #000,
@@ -9,7 +10,8 @@ $colors: (
 );
 
 $widths: (
-  pc:     1200px,
+  pc:     1400px,
+  tablet: 1000px,
   sp:     600px,
 );
 
@@ -35,13 +37,19 @@ $widths: (
     width: $width;
   }
 }
-@mixin mq-up($width: pc) {
-  @media screen and (min-width: #{map-get($widths, $width)}){
+
+@mixin sp{
+  @media screen and(max-width: 600px){
     @content;
   }
 }
-@mixin mq-down($width: pc) {
-  @media screen and (max-width: #{map-get($widths, $width)}){
+@mixin tablet{
+  @media screen and(min-width: 1000px){
+    @content;
+  }
+}
+@mixin pc{
+  @media screen and(min-width: 1400px){
     @content;
   }
 }
